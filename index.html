@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mundo Juguetón | Tienda de juguetes</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="encabezado">
+    <a class="logo" href="#">🧸 Mundo Juguetón</a>
+    <div class="acciones-header">
+      <button id="modoOscuro" class="boton boton-claro" type="button">🌙 Modo oscuro</button>
+      <a href="#carrito" class="boton boton-principal">🛒 Carrito <span id="contadorCarrito">0</span></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <p class="etiqueta">UN MUNDO PARA IMAGINAR</p>
+        <h1>¡La diversión empieza acá!</h1>
+        <p>Juguetes para jugar, aprender y crear nuevas aventuras.</p>
+        <a class="boton boton-principal" href="#catalogo">Ver juguetes</a>
+      </div>
+      <div class="hero-dibujo" aria-label="Juguetes">🧸 🚂 🪁</div>
+    </section>
+
+    <section id="catalogo" class="seccion">
+      <div class="titulo-seccion">
+        <div>
+          <p class="etiqueta">NUESTRO CATÁLOGO</p>
+          <h2>Encontrá tu próximo juguete</h2>
+        </div>
+      </div>
+
+      <div class="controles">
+        <input id="buscador" type="search" placeholder="🔎 Buscar un juguete..." aria-label="Buscar juguetes">
+        <select id="filtroCategoria" aria-label="Filtrar por categoría">
+          <option value="todos">Todas las categorías</option>
+          <option value="peluches">Peluches</option>
+          <option value="juegos">Juegos de mesa</option>
+          <option value="construccion">Construcción</option>
+          <option value="vehiculos">Vehículos</option>
+        </select>
+        <select id="ordenPrecio" aria-label="Ordenar por precio">
+          <option value="normal">Ordenar por precio</option>
+          <option value="menor">Precio: menor a mayor</option>
+          <option value="mayor">Precio: mayor a menor</option>
+        </select>
+      </div>
+
+      <p id="mensajeResultados" class="mensaje-resultados">Estos son nuestros juguetes.</p>
+      <div id="productos" class="productos"></div>
+    </section>
+
+    <section id="carrito" class="seccion carrito-seccion">
+      <div class="titulo-seccion">
+        <div>
+          <p class="etiqueta">TU COMPRA</p>
+          <h2>Mi carrito 🛒</h2>
+        </div>
+      </div>
+      <div id="contenidoCarrito" class="contenido-carrito">
+        <p class="carrito-vacio">Todavía no agregaste juguetes. ¡Elegí uno del catálogo!</p>
+      </div>
+      <div class="total-carrito">
+        <strong>Total: <span id="totalCarrito">$0</span></strong>
+        <button id="finalizarCompra" class="boton boton-principal" type="button">Finalizar compra</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>🧸 Mundo Juguetón — ¡La imaginación no tiene límites!</p>
+    <p>Proyecto escolar realizado con HTML, CSS y JavaScript.</p>
+  </footer>
+  <div id="notificacion" class="notificacion" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
